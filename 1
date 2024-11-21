@@ -1,0 +1,84 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+#define sz 5
+ void push(int s[sz], int *top, int item)
+	{
+	if (*top == sz-1)
+	printf(" Stack Overflow, Insertion not Possible \n");
+	else
+	{
+	*top = *top + 1;
+	s[*top] = item;
+	}
+	}
+void pop(int s[sz], int *top)
+	{
+	if (*top == -1)
+	printf(" Stack Underflow, deletion not Possible \n");
+	else
+	{
+	printf(" Item deleted is %d \n", s[*top]);
+	*top = *top - 1;
+	}
+}
+
+void display(int s[sz], int top)
+{
+int i;
+
+if (top == -1)
+printf(" Stack is Empty, Display not  Possible \n");
+else
+{
+printf(" The content of Stack are \n");
+for(i=0;i<=top;i++)
+printf("s[%d] ===>> %d\n",i,s[i]);
+}
+}
+
+
+
+void main()
+{
+	int s[sz], top = -1, item, ch;
+	for(;;)
+		{
+		printf(" Enter 1:Insert 2: delete 3: Display 4:exit \n");
+		scanf("%d",&ch);
+			switch(ch)
+				{
+				case 1: printf("Enter the Item to be Inserted \n");
+					scanf("%d",&item);
+					push(s,&top,item);
+					break;
+				case 2: pop(s,&top);
+					break;
+				case 3: display(s,top);
+					break;
+				default: exit(0);
+				}
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
