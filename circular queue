@@ -6,7 +6,7 @@
 #define sz 5
 
 
-void push(int q[], int *r, int *f, int *count, int item)
+void push(int q[sz], int *r, int *f, int *count, int item)
 {
     if(*count == sz)  
     {
@@ -21,7 +21,7 @@ void push(int q[], int *r, int *f, int *count, int item)
 }
 
 
-void pop(int q[], int *f, int *count)
+void pop(int q[sz], int *f, int *count)
 {
     if(*count == 0)  
     {
@@ -36,7 +36,7 @@ void pop(int q[], int *f, int *count)
 }
 
 
-void display(int q[], int f, int count)
+void display(int q[sz], int f, int count)
 {
     int i, j;
     if(count == 0)  
